@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Forme</title>
+  <link href="styles.css" rel="stylesheet" />
+</head>
+  <style>
+    h1,p{
+  text-align:center;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+h1{
+  font-weight: 400;
+  line-height: 1.2;
+  display: block;
+  font-size: 2em;
+}
+p{
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    font-size: 1.125rem;  
+}
+
+.pal{
+ position:center;
+ padding:40px;
+ margin-left:276px;
+ margin-right:276px;
+ margin-top:28px;
+ color:white;
+}
+.dob{
+  position:center;
+  background-color:rgba(27, 27, 50, 0.8);
+  padding:2.5rem;
+  border-radius:5px;
+  margin-top:30px;
+  font-size: 1rem;
+  
+ 
+}
+body{
+  background-image:linear-gradient(109deg, rgba(56, 54, 158, 0.8), rgba(132, 132, 204, 0.7)),url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  color:#f3f3f3;
+  display:block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+}
+label{
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom:0px;
+  padding-bottom:5px; 
+  display:block; 
+ 
+}
+.kal{
+  width:99.5%;
+  height:2.375rem;
+  border:1px solid white;
+  border-radius:5px;
+}
+select{
+  width:100%;
+  height:2.375rem;
+  border:1px solid white;
+  border-radius:5px;
+}
+.ret{
+  padding: 4px;
+  margin:0px 0px 20px;
+  color:white;
+}
+header {
+    padding: 0 0.625rem;
+    margin-bottom: 1.875rem;
+    display:block;
+}
+.dos{
+  margin-top:20px;
+}
+textarea {
+    min-height: 120px;
+    width: 96.3%;
+    padding: 0.625rem;
+    resize: vertical;
+}
+button{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #37af65;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    margin-top:25px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    }
+
+
+
+input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.input-radio, .input-checkbox {
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+}
+.aska{
+  margin-top:24px;
+  margin-bottom:24px;
+}
+
+  </style>
+<body>
+  <div class="pal">
+    <header>
+      <h1 id="title">freeCodeCamp Survey Form</h1>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+    </header>
+
+    <form class="dob" id="survey-form" action="" method="post">
+
+      <div class="ret">
+        <label id="name-label" for="name">Name</label>
+        <input class="kal" type="text" id="name" name="nom" placeholder="Enter your name" required />
+      </div>
+
+      <div class="ret">
+        <label id="email-label" for="email">Email</label>
+        <input class="kal" type="email" id="email" name="email" placeholder="Enter your Email" required />
+      </div>
+
+      <div class="ret">
+        <label id="number-label" for="number">Age (optional)</label>
+        <input class="kal" type="number" id="number" name="age" placeholder="Age" min="1" max="120" />
+      </div>
+
+      <label for="dropdown">Which option best describes your current role?</label>
+      <select id="dropdown" name="role">
+        <option>Select current role</option>
+        <option>Student</option>
+        <option>Full time job</option>
+        <option>Full time learner</option>
+        <option>Prefer not to say</option>
+        <option>Other</option>
+      </select>
+
+      <div class="aska">
+        <label>Would you recommend freeCodeCamp to a friend?</label>
+        <label><input type="radio" name="recommend" value="Definitely" checked />Definitely</label>
+        <label><input type="radio" name="recommend" value="Maybe" />Maybe</label>
+        <label><input type="radio" name="recommend" value="Not Sure" />Not Sure</label>
+      </div>
+
+      <div class="aska">
+        <label for="feature">What is your favorite feature of freeCodeCamp?</label>
+        <select name="feature" id="feature">
+          <option>Select an option</option>
+          <option>Challenges</option>
+          <option>Project</option>
+          <option>Community</option>
+          <option>Open Source</option>
+        </select>
+      </div>
+
+      <label>What would you like to see improved? (Check all that apply)</label><br />
+      <label><input type="checkbox" name="check" value="Front-end Projects" />Front-end Projects</label>
+      <label><input type="checkbox" name="check" value="Back-end Projects" />Back-end Projects</label>
+      <label><input type="checkbox" name="check" value="Data Visualisation" />Data Visualisation</label>
+      <label><input type="checkbox" name="check" value="Challenges" />Challenges</label>
+      <label><input type="checkbox" name="check" value="Open Source Community" />Open Source Community</label>
+      <label><input type="checkbox" name="check" value="Gitter help rooms" />Gitter help rooms</label>
+      <label><input type="checkbox" name="check" value="Videos" />Videos</label>
+      <label><input type="checkbox" name="check" value="City Meetups" />City Meetups</label>
+      <label><input type="checkbox" name="check" value="Wiki" />Wiki</label>
+      <label><input type="checkbox" name="check" value="Forum" />Forum</label>
+      <label><input type="checkbox" name="check" value="Additional courses" />Additional courses</label>
+
+      <label class="dos" for="comments">Any comments or suggestions?</label><br />
+      <textarea id="comments" name="comments" placeholder="Enter your comment here"></textarea><br />
+
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
